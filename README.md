@@ -91,8 +91,8 @@ The dataset includes the following columns:
 This project follows an architecture that simulates a real-time data flow of Valorant games data using Kafka producer and consumer. The architecture includes:
 
 1. Kafka Server and Zookeeper running on an AWS EC2 instance.
-2. Kafka Producer to stream real-time data.
-3. Kafka Consumer to consume the real-time data.
+2. Kafka Producer to stream real-time data. [(Producer Notebook)](https://github.com/Hamagistral/VCT2023-Kafka-AWS/blob/master/KafkaProducer.ipynb)
+3. Kafka Consumer to consume the real-time data. [(Consumer Notebook)](https://github.com/Hamagistral/VCT2023-Kafka-AWS/blob/master/KafkaConsumer.ipynb)
 4. Store data in JSON files and upload them to an S3 Bucket.
 5. AWS Glue Crawler to crawl the S3 Bucket and create a table in AWS Athena.
 6. SQL analysis using AWS Athena to gain insights into the data.
@@ -144,7 +144,7 @@ If you would like to remove your stack from the Cloud, use the `terraform destro
 > See this [file](https://github.com/Hamagistral/VCT2023-Kafka-AWS/blob/master/commands_ec2.md) for the following steps in detail.
 
 #### 3. Connect to the AWS EC2 Instance 
-#### 4. Configure Kafka producer and consumer.
+#### 4. Configure Kafka producer and consumer. 
 #### 5. Stream real-time data into Kafka.
 #### 6. Store the consumed data in an S3 Bucket.
 
