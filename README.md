@@ -27,7 +27,7 @@ In this project, I conducted an end-to-end data engineering project, building a 
 
 ### 💾 Dataset
 
-The project uses the *[Valorant Champions Tour 2023 All Tournament Dataset](https://www.kaggle.com/datasets/ediashtarevin/vct-champions-2023-stats)* from Kaggle. This dataset contains extensive statistics for each player and team in each game, including information about teams, maps, and agents. It includes over 20 columns and 6000+ rows.
+The project uses the *[Valorant Champions Tour 2023 All-Tournament Dataset](https://www.kaggle.com/datasets/ediashtarevin/vct-champions-2023-stats)* from Kaggle. This dataset contains extensive statistics for each player and team in each game, including information about teams, maps, and agents. It includes over 20 columns and 6000+ rows.
 
 The dataset includes the following columns:
 
@@ -60,7 +60,7 @@ The dataset includes the following columns:
 ### 🎯 Project Goals
 
 - Set up the cloud infrastructure using Terraform.
-- Build a real-time data processing and analysis from Valorant games.
+- Build real-time data processing and analysis from Valorant games.
 - Leverage AWS cloud infrastructure, including EC2, S3, Glue, Athena to handle data processing and analysis tasks.
 - Simulate real-time data flow using Python and Kafka for data streaming, with producer and consumer.
 - Utilize SQL queries to gain insights into top-picked agents by map, the top-played agent overall, top-played maps, top players by rating, and team wins and losses.
@@ -72,14 +72,14 @@ The dataset includes the following columns:
   - Haven is the top 1 picked map with 110 picks followed by Pearl with 90 and Ascent with 80.
  
 - 🦸‍♂️ **Top 3 Picked Agents**
-  - **N°1:** Jett (Duelist) is the top picked agent with 42 picks and with an Average K/D of 1.16
+  - **N°1:** Jett (Duelist) is the top-picked agent with 42 picks and an Average K/D of 1.16
   - **N°2:** Killjoy (Sentinel) is the second most picked agent with 40 picks and an Average K/D of 1.12
   - **N°3:** KAY/O (Initiator) is the third agent by picks with 29 and an Average K/D of 1.0
 
-> Conclusion: Most teams prefer to play with those agents in the top picked maps (Haven, Pearl and Ascent)
+> Conclusion: Most teams prefer to play with those agents in the top-picked maps (Haven, Pearl, and Ascent)
 
 - 👨‍💻 **Top players in the Tournament by Rating**
-  - Xffero (DFM) have the highest rating in the tournament 2.10 in the map Haven with Sova.
+  - Xffero (DFM) has the highest rating in the tournament 2.10 in the map Haven with Sova.
   - k1Ng (T1) is second with 2.05 in Haven with Killjoy.
   - Dep (GE) with a rating of 1.91 also in Haven using Jett as an agent.
 
@@ -93,7 +93,7 @@ This project follows an architecture that simulates a real-time data flow of Val
 1. Kafka Server and Zookeeper running on an AWS EC2 instance.
 2. Kafka Producer to stream real-time data.
 3. Kafka Consumer to consume the real-time data.
-4. Data stored in JSON files and uploaded to an S3 Bucket.
+4. Store data in JSON files and upload them to an S3 Bucket.
 5. AWS Glue Crawler to crawl the S3 Bucket and create a table in AWS Athena.
 6. SQL analysis using AWS Athena to gain insights into the data.
 
@@ -103,10 +103,10 @@ This project follows an architecture that simulates a real-time data flow of Val
 
 - **Infrastructure**: Terraform
 - **Amazon Web Services (AWS)**
-  - Amazon Elastic Compute Cloud (Amazon EC2)
+  - VM Machine: Amazon Elastic Compute Cloud (Amazon EC2)
   - Data Lake: S3 Bucket
   - Amazon Glue Crawler: Creates tables in the Data Catalog
-  - Amazon Athena: Analyze data from the Amazon Simple Storage Service (S3) data lake
+  - Amazon Athena: Analyze Data
 - **Real-Time Streaming**: Apache Kafka
 
 <a name="usage"></a>
@@ -153,7 +153,7 @@ If you would like to remove your stack from the Cloud, use the `terraform destro
 #### 7. Use AWS Glue Crawler to create a table in AWS Athena.
 ![table_on_datacatalog](https://github.com/Hamagistral/VCT2023-Kafka-AWS/assets/66017329/bbd23fb3-79f1-4ae3-90bb-f43f716a6952)
 #### 8. Analyze the data using SQL in AWS Athena.
-- SQL Query for Top Players by Ratingg
+- SQL Query for Top Players by Rating
 ![top_players_byrating](https://github.com/Hamagistral/VCT2023-Kafka-AWS/assets/66017329/a9d96f50-cacf-452f-a27b-85c6d7cb543d)
 
 > For more see the [Analytics Folder](https://github.com/Hamagistral/VCT2023-Kafka-AWS/tree/master/analytics) for the results and [SQL Queries Folder](https://github.com/Hamagistral/VCT2023-Kafka-AWS/tree/master/sql_queries) for the executed SQL Queries inside Athena.
